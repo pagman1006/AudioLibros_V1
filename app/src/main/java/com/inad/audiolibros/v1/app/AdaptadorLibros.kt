@@ -23,8 +23,6 @@ class AdaptadorLibros : RecyclerView.Adapter<AdaptadorLibros.ViewHolder>() {
         inflador = contexto.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
     }
 
-
-
     // Creamos nuestro ViewHolder, con los tipos de elementos a modificar
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var portada: ImageView
@@ -39,7 +37,7 @@ class AdaptadorLibros : RecyclerView.Adapter<AdaptadorLibros.ViewHolder>() {
     // Creamos el ViewHolder con la vista de un elemento sin personalizar
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         // Inflamos la vista desde el xml
-        var v : View = inflador!!.inflate(R.layout.elemento_selector, null)
+        var v: View = inflador!!.inflate(R.layout.elemento_selector, null)
         v.setOnClickListener(onClickListener)
         return ViewHolder(v);
     }

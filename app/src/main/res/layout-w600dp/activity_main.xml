@@ -5,7 +5,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/contenedor_pequeno"
     android:orientation="horizontal"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".MainActivity">
@@ -13,8 +12,18 @@
     <fragment
         android:id="@+id/selector_fragment"
         android:name="com.inad.audiolibros.v1.app.fragments.SelectorFragment"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="match_parent"
+        android:layout_weight="3"
         />
+
+    <fragment
+        android:id="@+id/detalle_fragment"
+        android:name="com.inad.audiolibros.v1.app.fragments.DetalleFragment"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        />
+
 
 </LinearLayout>

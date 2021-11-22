@@ -37,7 +37,7 @@ class SelectorFragment : Fragment() {
     ): View? {
 
         var vista: View = inflater.inflate(R.layout.fragment_selector, container, false)
-        recyclerView = vista.findViewById<View>(R.id.recycler_view) as RecyclerView
+        recyclerView = vista.findViewById(R.id.fragment_selector) as RecyclerView
         recyclerView!!.layoutManager = GridLayoutManager(actividad, 2)
         recyclerView!!.adapter = adaptador
         adaptador!!.setOnItemClickListener { v ->
