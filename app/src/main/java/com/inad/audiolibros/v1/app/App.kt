@@ -7,12 +7,12 @@ import java.util.*
 class App : Application() {
 
     var vectorBooks: Vector<Book>? = null
-    var adapter: AdapterBooks? = null
+    var adapter: AdapterBooksFilter? = null
 
     override fun onCreate() {
         super.onCreate()
         vectorBooks = exampleBooks()
-        adapter = AdapterBooks()
+        adapter = AdapterBooksFilter()
         adapter!!.adapterBooksConstructor(this, vectorBooks)
     }
 

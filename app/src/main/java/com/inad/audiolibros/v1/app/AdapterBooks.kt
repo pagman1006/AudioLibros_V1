@@ -10,16 +10,16 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import java.util.*
 
-class AdapterBooks : RecyclerView.Adapter<AdapterBooks.ViewHolder>() {
+open class AdapterBooks : RecyclerView.Adapter<AdapterBooks.ViewHolder>() {
 
     private var inflater: LayoutInflater? = null
-    private var vectorBooks: Vector<Book>? = null
+    var vectorBooks: Vector<Book>? = null
     private var context: Context? = null
 
     private var onClickListener: View.OnClickListener? = null
-    private var onLongClickListener : View.OnLongClickListener? = null
+    private var onLongClickListener: View.OnLongClickListener? = null
 
-    fun adapterBooksConstructor(context: Context, vectorBooks: Vector<Book>?) {
+    open fun adapterBooksConstructor(context: Context, vectorBooks: Vector<Book>?) {
         this.context = context
         this.vectorBooks = vectorBooks
         inflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater

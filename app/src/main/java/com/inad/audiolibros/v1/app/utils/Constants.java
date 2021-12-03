@@ -2,6 +2,7 @@ package com.inad.audiolibros.v1.app.utils;
 
 public class Constants {
 
+    public static final String G_TODOS = "todos";
     public static final String G_EPICO = "Poema épico";
     public static final String G_S_XIX = "Literatura siglo XIX";
     public static final String G_SUSPENSE = "Suspense";

@@ -9,4 +9,8 @@ class Book(
     var gender: String?,
     var novelty: Boolean?,
     var read: Boolean?
-)
+) {
+    override fun toString(): String {
+        return "Book(title=$title, author=$author, gender=$gender, novelty=$novelty, read=$read)"
+    }
+}

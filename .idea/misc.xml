@@ -12,11 +12,20 @@
         <entry key="app/src/main/res/layout-w600dp/activity_main.xml" value="0.318342151675485" />
         <entry key="app/src/main/res/layout-w600dp/content_main.xml" value="0.318342151675485" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.37623762376237624" />
-        <entry key="app/src/main/res/layout/content_main.xml" value="0.37604166666666666" />
+        <entry key="app/src/main/res/layout/activity_main_2.xml" value="0.37604166666666666" />
+        <entry key="app/src/main/res/layout/activity_main_fail.xml" value="0.37604166666666666" />
+        <entry key="app/src/main/res/layout/activlty_main.xml" value="0.37604166666666666" />
+        <entry key="app/src/main/res/layout/app_bar_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/content_main.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/drawer_layout.xml" value="0.10837438423645321" />
         <entry key="app/src/main/res/layout/elemento_selector.xml" value="0.37604166666666666" />
         <entry key="app/src/main/res/layout/fragment_detalle.xml" value="0.37623762376237624" />
         <entry key="app/src/main/res/layout/fragment_selector.xml" value="0.37604166666666666" />
+        <entry key="app/src/main/res/layout/nav_header_main.xml" value="0.37604166666666666" />
+        <entry key="app/src/main/res/layout/toolbar.xml" value="0.25885416666666666" />
+        <entry key="app/src/main/res/menu/activity_main_drawer.xml" value="0.37604166666666666" />
         <entry key="app/src/main/res/menu/menu_main.xml" value="0.37329132145340044" />
+        <entry key="app/src/main/res/menu/menu_selector.xml" value="0.37604166666666666" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.228125" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/kappa.xml" value="0.3921875" />
       </map>
