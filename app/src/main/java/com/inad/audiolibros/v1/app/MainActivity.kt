@@ -8,14 +8,14 @@ import androidx.recyclerview.widget.RecyclerView
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var recyclerView : RecyclerView
-    lateinit var layoutManager : RecyclerView.LayoutManager
+    private lateinit var recyclerView : RecyclerView
+    private lateinit var layoutManager : RecyclerView.LayoutManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val app : Aplicacion = application as Aplicacion
+        val app : BookApp = application as BookApp
         recyclerView = findViewById(R.id.recycler_view)
         recyclerView.adapter = app.adaptador
         layoutManager = GridLayoutManager(this, 2)

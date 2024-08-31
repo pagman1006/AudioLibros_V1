@@ -9,51 +9,44 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import java.util.*
 
-class AdaptadorLibros : RecyclerView.Adapter<AdaptadorLibros.ViewHolder>() {
+class BooksAdapter : RecyclerView.Adapter<BooksAdapter.ViewHolder>() {
 
-    private var inflador: LayoutInflater? = null
-    protected var vectorLibros: Vector<Libro>? = null
-    private var contexto: Context? = null
+    private var inflator: LayoutInflater? = null
+    protected var vectorBooks: Vector<Book>? = null
+    private var context: Context? = null
 
     private var onClickListener: View.OnClickListener? = null
 
-    fun adaptadorLibrosConstructor(contexto: Context, vectorLibros: Vector<Libro>?) {
-        this.contexto = contexto
-        this.vectorLibros = vectorLibros
-        inflador = contexto.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+    fun booksAdapterConstructor(context: Context, vectorBooks: Vector<Book>?) {
+        this.context = context
+        this.vectorBooks = vectorBooks
+        inflator = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
     }
-
-
 
     // Creamos nuestro ViewHolder, con los tipos de elementos a modificar
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        var portada: ImageView
-        var titulo: TextView
-
-        init {
-            portada = itemView.findViewById<View>(R.id.portada) as ImageView
-            titulo = itemView.findViewById<View>(R.id.titulo) as TextView
-        }
+        var frontPage: ImageView = itemView.findViewById<View>(R.id.portada) as ImageView
+        var title: TextView = itemView.findViewById<View>(R.id.titulo) as TextView
     }
 
     // Creamos el ViewHolder con la vista de un elemento sin personalizar
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         // Inflamos la vista desde el xml
-        var v : View = inflador!!.inflate(R.layout.elemento_selector, null)
+        val v : View = inflator!!.inflate(R.layout.elemento_selector, null)
         v.setOnClickListener(onClickListener)
         return ViewHolder(v);
     }
 
     // Usamos como base el ViewHolder y lo personalizamos
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val libro = vectorLibros!!.elementAt(position)
-        holder.portada.setImageResource(libro.recursoImagen)
-        holder.titulo.text = libro.titulo
+        val book = vectorBooks!!.elementAt(position)
+        holder.frontPage.setImageResource(book.imageResource)
+        holder.title.text = book.title
     }
 
     // Indicamos el número de elementos de la lista
     override fun getItemCount(): Int {
-        return vectorLibros!!.size
+        return vectorBooks!!.size
     }
 
     fun setOnItemClickListener(onClickListener: View.OnClickListener?) {
